@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ludo.jogo.controller.ControladorJogo">
+
+    <center>
+        <Pane fx:id="painelTabuleiro"
+              prefWidth="600"
+              prefHeight="600"
+              BorderPane.alignment="CENTER"/>
+    </center>
+
+    <right>
+        <VBox spacing="15"
+              alignment="TOP_CENTER"
+              prefWidth="220"
+              BorderPane.alignment="CENTER">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <children>
+
+                <!-- Título -->
+                <Label text="LUDO MC322"
+                       style="-fx-font-size: 24px; -fx-font-weight: bold;"
+                       alignment="CENTER"
+                       maxWidth="Infinity"/>
+
+                <!-- Status da vez -->
+                <Label fx:id="labelStatus"
+                       text="Bem-vindo!"
+                       wrapText="true"
+                       style="-fx-font-size: 14px;"
+                       maxWidth="180"
+                       alignment="CENTER"/>
+
+                <!-- Botão de rolar dado -->
+                <Button fx:id="botaoRolarDado"
+                        text="Rolar Dado"
+                        onAction="#handleRolarDado"
+                        prefWidth="160"
+                        alignment="CENTER"/>
+
+                <!-- Área do desenho do dado (centralizada) -->
+                <Pane fx:id="paneDado"
+                      prefWidth="120"
+                      prefHeight="120"
+                      style="-fx-background-color: transparent;"> </Pane>
+
+                <!-- Espaço elástico, mas não até o rodapé -->
+                <Region prefHeight="300"/>
+
+                <!-- Salvar -->
+                <Label text="Salvar Jogo"
+                       style="-fx-font-weight: bold;"/>
+
+                <GridPane hgap="10" vgap="10" alignment="CENTER">
+
+                    <Button id="btnSalvarSlot1"
+                            text="Slot 1"
+                            onAction="#handleSalvarJogo"
+                            GridPane.rowIndex="0"
+                            GridPane.columnIndex="0"/>
+
+                    <Button id="btnSalvarSlot2"
+                            text="Slot 2"
+                            onAction="#handleSalvarJogo"
+                            GridPane.rowIndex="0"
+                            GridPane.columnIndex="1"/>
+
+                    <Button id="btnSalvarSlot3"
+                            text="Slot 3"
+                            onAction="#handleSalvarJogo"
+                            GridPane.rowIndex="1"
+                            GridPane.columnIndex="0"/>
+
+                    <Button id="btnSalvarSlot4"
+                            text="Slot 4"
+                            onAction="#handleSalvarJogo"
+                            GridPane.rowIndex="1"
+                            GridPane.columnIndex="1"/>
+                </GridPane>
+
+                <!-- Apagar -->
+                <Label text="Apagar Save"
+                       style="-fx-font-weight: bold;"/>
+
+                <GridPane hgap="10" vgap="10" alignment="CENTER">
+
+                    <Button id="btnApagarSlot1"
+                            text="Slot 1"
+                            onAction="#handleApagarSave"
+                            GridPane.rowIndex="0"
+                            GridPane.columnIndex="0"/>
+
+                    <Button id="btnApagarSlot2"
+                            text="Slot 2"
+                            onAction="#handleApagarSave"
+                            GridPane.rowIndex="0"
+                            GridPane.columnIndex="1"/>
+
+                    <Button id="btnApagarSlot3"
+                            text="Slot 3"
+                            onAction="#handleApagarSave"
+                            GridPane.rowIndex="1"
+                            GridPane.columnIndex="0"/>
+
+                    <Button id="btnApagarSlot4"
+                            text="Slot 4"
+                            onAction="#handleApagarSave"
+                            GridPane.rowIndex="1"
+                            GridPane.columnIndex="1"/>
+                </GridPane>
+
+                <!-- Voltar -->
+                <Button text="Voltar"
+                        onAction="#handleVoltar"
+                        prefWidth="160"/>
+
+            </children>
+        </VBox>
+    </right>
+
+</BorderPane>
+

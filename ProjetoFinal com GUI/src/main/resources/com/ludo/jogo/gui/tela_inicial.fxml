@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ludo.jogo.controller.ControladorMenu"
+            fx:id="rootPane"
+            prefWidth="800.0"
+            prefHeight="600.0">
+
+    <center>
+        <VBox fx:id="menuPrincipal" alignment="CENTER" spacing="15">
+            <padding>
+                <Insets top="40" right="40" bottom="40" left="40"/>
+            </padding>
+
+            <Label text="LUDO" style="-fx-font-size: 36px; -fx-font-weight: bold;"/>
+
+            <Button text="Jogador x Jogador"
+                    fx:id="btnJogadorVsJogador"
+                    onAction="#onJogadorVsJogador"
+                    prefWidth="220"/>
+
+            <Button text="Jogador x Máquina"
+                    fx:id="btnJogadorVsMaquina"
+                    onAction="#onJogadorVsMaquina"
+                    prefWidth="220"/>
+
+            <Button text="Carregar Jogo"
+                    fx:id="btnCarregarJogo"
+                    onAction="#onCarregarJogo"
+                    prefWidth="220"/>
+
+            <Button text="Regras"
+                    fx:id="btnRegras"
+                    onAction="#onRegras"
+                    prefWidth="220"/>
+
+            <Button text="Sair"
+                    fx:id="btnSair"
+                    onAction="#onSair"
+                    prefWidth="220"/>
+        </VBox>
+    </center>
+
+</BorderPane>
