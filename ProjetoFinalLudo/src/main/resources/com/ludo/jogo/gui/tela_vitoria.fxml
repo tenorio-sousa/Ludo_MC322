@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ludo.jogo.controller.ControladorVitoria"
+      alignment="CENTER"
+      spacing="20"
+      style="-fx-background-color: white;"
+      prefWidth="500"
+      prefHeight="400">
+
+    <children>
+
+        <Label fx:id="labelVitoria"
+               text="Vitória!"
+               style="-fx-font-size: 32px; -fx-font-weight: bold;"/>
+
+        <Label fx:id="labelDescricao"
+               text="Jogador X (COR) venceu!"
+               style="-fx-font-size: 18px;"/>
+
+        <Button text="Voltar ao Menu"
+                onAction="#handleVoltarMenu"
+                prefWidth="200"/>
+
+    </children>
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+</VBox>
